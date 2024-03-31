@@ -32,3 +32,13 @@ Sun 31 Mar 2024 07:47:53 PM UTC:
  tests:  9|3
 total_score: 35/70
 42ee18e
+Sun 31 Mar 2024 07:56:40 PM UTC: 
+ list.c | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:78:23: error: expected expression before ‘)’ token
+   78 |   Node *Node = (Node *)malloc(sizeof(Node));
+      |                       ^
+Compilation failed
+8b75454

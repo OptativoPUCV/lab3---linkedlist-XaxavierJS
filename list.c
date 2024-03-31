@@ -75,12 +75,18 @@ void *prevList(List *list) {
 }
 
 void pushFront(List *list, void *data) {
-  Node *node = createNode(data);
-  if (list->head == NULL){
-    list->head = node;
-    list->tail = node;
+  Node *Node = (Node *)malloc(sizeof(Node));
+  Node->data = data;
+  Node->next = NULL;
+  Node->prev = NULL;
+  if (list->head == NULL) {
+      list->head = Node;
+      list->tail = Node;
+  } else {
+      Node->next = list->head;
+      list->head->prev = Node;
+      list->head = Node;
   }
-  
 }
 
 void pushBack(List *list, void *data) {
@@ -88,13 +94,7 @@ void pushBack(List *list, void *data) {
   pushCurrent(list, data);
 }
 
-void pushCurrent(List *list, void *data) {
-  Node *node = createNode(data);
-  if (list->current == NULL){
-    list->head = node;
-    list->tail = node;
-  }
-}
+void pushCurrent(List *list, void *data) {}
 
 void *popFront(List *list) {
   list->current = list->head;
