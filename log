@@ -2,3 +2,9 @@ Sun 31 Mar 2024 05:49:01 PM UTC:
  tests:  0|6
 total_score: 0/70
 bd2cad7
+Sun 31 Mar 2024 05:56:25 PM UTC: 
+ list.c | 36 ++++++++++++++----------------------
+ 1 file changed, 14 insertions(+), 22 deletions(-)
+ tests:  1|5
+total_score: 10/70
+4aa8c2e
